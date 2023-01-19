@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LinkedApp.Views.ItemsPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:LinkedApp.ViewModels"  
+             xmlns:model="clr-namespace:LinkedApp.Models"  
+             x:Name="BrowseItemsPage">
+
+    <RefreshView x:DataType="local:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+
+        <StackLayout Padding="10" >
+            <Label Text="Items Page On Linked App" FontSize="Large"></Label>
+        </StackLayout>
+    </RefreshView>
+
+</ContentPage>
